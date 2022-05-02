@@ -7,7 +7,7 @@ function RoomsList({ rooms }: { rooms: any[] }) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsEmpty(rooms.length === 0);
-    }, 300);
+    }, 600);
 
     return () => {
       clearTimeout(timeoutId);

@@ -17,9 +17,12 @@ export const useBeachResortStrapiClient = (query?: TBeachResortQuery) => {
   let queryString = "";
 
   if (query && Object.keys(query).length > 0) {
-    queryString = `?${qs.stringify(query, {
-      encodeValuesOnly: true,
-    })}`;
+    queryString = `?${qs.stringify(
+      { ...query, populate: "*" },
+      {
+        encodeValuesOnly: true,
+      },
+    )}`;
   }
 
   const { data, error, isValidating } = useSWR(

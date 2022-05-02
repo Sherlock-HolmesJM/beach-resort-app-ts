@@ -17,6 +17,27 @@ declare global {
     images: string[];
   }
 
+  interface TBeachResortResponse {
+    id: number;
+    attributes: {
+      name: string;
+      slug: string;
+      createdAt: string;
+      updatedAt: string;
+      publishedAt: string;
+      price: number;
+      type: string;
+      size: number;
+      capacity: number;
+      breakfast: boolean;
+      featured: boolean;
+      description: string;
+      extras: string[];
+      images: string[];
+      pets: boolean;
+    };
+  }
+
   interface TRoomFilter {
     type: string;
     breakfast: boolean;
